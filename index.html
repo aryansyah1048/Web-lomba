@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>YogyaPedia</title>
+
+    <link rel="icon" href="image/logojogja.png" type="image/x-icon" />
+
     <script
       src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
       defer
@@ -27,25 +30,45 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- My Style -->
-    <style>
+    <!-- <style>
       [x-cloak] {
         display: none !important;
       }
-    </style>
+    </style> -->
 
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Navbar -->
     <nav
       id="navbar"
       class="fixed top-0 left-0 w-full bg-white shadow-md z-50 h-20 py-3"
     >
-      <div class="container mx-auto flex justify-between items-center">
+      <div class="container mx-auto flex justify-between items-center px-6">
+        <!-- Logo -->
         <a href="#">
-          <img src="image/logojogja.png" class="-mt-2 w-20 h-20 ml-16" />
+          <img src="image/logojogja.png" class="-mt-2 w-20 h-20" />
         </a>
-        <ul class="hidden md:flex space-x-6 mr-12 -mt-1">
+
+        <!-- Tombol Hamburger (Muncul di layar kecil) -->
+        <button id="menu-btn" class="md:hidden text-black text-3xl">☰</button>
+
+        <!-- Menu Navbar (Desktop) -->
+        <ul class="hidden md:flex space-x-6">
+          <li><a href="#javascript:void(0);" class="text-black">Home</a></li>
+          <li><a href="#about" class="text-black">About</a></li>
+          <li><a href="#Budaya" class="text-black">Budaya</a></li>
+          <li><a href="#wisata" class="text-black">Wisata</a></li>
+          <li><a href="#ourteam" class="text-black">Our Team</a></li>
+          <li><a href="#comentar" class="text-black">Review</a></li>
+        </ul>
+      </div>
+
+      <!-- Menu Mobile -->
+      <div
+        id="mobile-menu"
+        class="hidden absolute top-20 left-0 w-full bg-white shadow-md md:hidden"
+      >
+        <ul class="flex flex-col space-y-4 py-4 items-center">
           <li><a href="#home" class="text-black">Home</a></li>
           <li><a href="#about" class="text-black">About</a></li>
           <li><a href="#Budaya" class="text-black">Budaya</a></li>
@@ -242,57 +265,98 @@
       </div>
     </section>
     <!-- wisata -->
-    <section id="wisata">
-      <div class="layar-dalam">
-        <h3>Wisata & Destinasi</h3>
-        <p class="ringkasan">
+    <section id="wisata" class="py-10">
+      <div class="layar-dalam text-center">
+        <h3 class="text-2xl font-semibold">Wisata & Destinasi</h3>
+        <p class="ringkasan max-w-lg mx-auto text-gray-600">
           Yogyakarta dikenal sebagai kota dengan sejuta pesona, mulai dari
           wisata alam, budaya, hingga kuliner. Beberapa tempat wisata populer di
-          Yogyakarta bisa menjadi pilihan untuk pengalaman tak terlupakan
+          Yogyakarta bisa menjadi pilihan untuk pengalaman tak terlupakan.
         </p>
       </div>
-      <div class="grid">
+
+      <!-- Grid Destinasi -->
+      <div
+        class="flex flex-wrap justify-center md:grid md:grid-cols-4 gap-6 px-4 md:px-10 mt-6 overflow-x-auto md:overflow-visible md:flex-nowrap snap-x snap-mandatory"
+      >
         <div
-          class="card"
+          class="card snap-start w-60 flex-shrink-0 md:w-auto"
           data-link="https://borobudur.injourneydestination.id/"
           data-aos="fade-up-left"
         >
           <div class="wrapper">
-            <img src="image/wisata budaya.jpeg" alt="Tour" />
+            <img
+              src="image/wisata budaya.jpeg"
+              alt="Tour"
+              class="rounded-lg shadow-md w-full"
+            />
           </div>
-          <button>visit</button>
-        </div>
-
-        <div class="card" data-link="https://tngmerapi.id/" data-aos="fade-up">
-          <div class="wrapper">
-            <img src="image/wisatamerapi.jpeg" alt="Tiket Pesawat" />
-          </div>
-          <button>visit</button>
+          <button
+            class="mt-2 bg-blue-500 text-white px-4 py-2 rounded-md w-full"
+          >
+            Visit
+          </button>
         </div>
 
         <div
-          class="card"
+          class="card snap-start w-60 flex-shrink-0 md:w-auto"
+          data-link="https://tngmerapi.id/"
+          data-aos="fade-up"
+        >
+          <div class="wrapper">
+            <img
+              src="image/wisatamerapi.jpeg"
+              alt="Tiket Pesawat"
+              class="rounded-lg shadow-md w-full"
+            />
+          </div>
+          <button
+            class="mt-2 bg-blue-500 text-white px-4 py-2 rounded-md w-full"
+          >
+            Visit
+          </button>
+        </div>
+
+        <div
+          class="card snap-start w-60 flex-shrink-0 md:w-auto"
           data-link="https://www.malmalioboro.co.id/"
           data-aos="fade-up"
         >
           <div class="wrapper">
-            <img src="image/wisata belanja.jpeg" alt="Paket Wisata" />
+            <img
+              src="image/wisata belanja.jpeg"
+              alt="Paket Wisata"
+              class="rounded-lg shadow-md w-full"
+            />
           </div>
-          <button>visit</button>
+          <button
+            class="mt-2 bg-blue-500 text-white px-4 py-2 rounded-md w-full"
+          >
+            Visit
+          </button>
         </div>
 
         <div
-          class="card"
+          class="card snap-start w-60 flex-shrink-0 md:w-auto"
           data-link="https://raminten.com/"
           data-aos="fade-up-right"
         >
           <div class="wrapper">
-            <img src="image/wisata kuliner.jpeg" alt="Cruise" />
+            <img
+              src="image/wisata kuliner.jpeg"
+              alt="Cruise"
+              class="rounded-lg shadow-md w-full"
+            />
           </div>
-          <button>visit</button>
+          <button
+            class="mt-2 bg-blue-500 text-white px-4 py-2 rounded-md w-full"
+          >
+            Visit
+          </button>
         </div>
       </div>
     </section>
+
     <!-- Our Team -->
 
     <section id="ourteam" class="p-6">
@@ -839,32 +903,6 @@
     <section id="footer" class="footer">
       <h6>© 2025 Sembada Dev. All Rights Reserved.</h6>
     </section>
-
-    <!-- nav -->
-    <!-- <script>
-      window.addEventListener("scroll", function () {
-        var navbar = document.getElementById("navbar");
-        if (window.scrollY > 50) {
-          navbar.classList.add("navbar-scroll");
-        } else {
-          navbar.classList.remove("navbar-scroll");
-        }
-      });
-    </script> -->
-
-    <!-- navbarr -->
-    <script>
-      window.addEventListener("scroll", function () {
-        var navbar = document.getElementById("navbar");
-        if (window.scrollY > 50) {
-          navbar.classList.add("scrolled", "py-0");
-          navbar.classList.remove("bg-transparent");
-        } else {
-          navbar.classList.remove("scrolled", "py-0");
-          navbar.classList.add("bg-transparent");
-        }
-      });
-    </script>
 
     <!-- wisata -->
     <script>
