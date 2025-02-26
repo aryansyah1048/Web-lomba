@@ -1,6 +1,22 @@
 /* nav */
 html {
   scroll-behavior: smooth; /* Bikin scroll ke section jadi smooth */
+  width: 100%;
+  background-color: #800000;
+}
+
+#navbar {
+  padding: 0;
+}
+
+#home {
+  padding: 0;
+  margin: 0;
+}
+
+.slider {
+  width: 100%;
+  overflow: hidden;
 }
 
 #navbar.container {
@@ -14,17 +30,18 @@ html {
 }
 
 .scrolled {
-  background-color: white !important;
+  background-color: #800000 !important;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 /* slider */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 body {
   font-family: Poppins;
-  margin: 0;
-  background-color: #010101;
+  background-color: #800000;
   color: #eee;
+  overflow-x: hidden; /* Menghindari scroll horizontal */
 }
+
 svg {
   width: 25px;
 }
@@ -52,12 +69,33 @@ header .menu {
   gap: 20px;
   font-weight: 500;
 }
+
+#navbar#mobile-menu ul li a {
+  color: #fafafa;
+}
+
+ul li a:hover {
+  background-color: #231651;
+  padding: 5px;
+  border-radius: 20px;
+  transition: 0.5s;
+  color: white;
+}
 /* css slider */
 .slider {
   height: 100vh;
-  margin-top: -50px;
+  position: relative;
   position: relative;
 }
+
+.slider .content p {
+  margin-bottom: 2px !important; /* Biar lebih dekat ke h2 */
+}
+
+.slider .content h2 {
+  margin-top: 2px !important; /* Biar lebih dekat ke p */
+}
+
 .slider .list .item {
   position: absolute;
   inset: 0 0 0 0;
@@ -218,6 +256,7 @@ section .konten-isi p {
 }
 section {
   padding: 50px 0px 50px 0px;
+  background-color: #800000;
 }
 section h3 {
   font-size: 30px;
@@ -262,6 +301,7 @@ section h3::after {
   align-items: center;
   gap: 30px;
   text-align: center;
+  background-color: #800000;
 }
 
 .layar-dalam {
